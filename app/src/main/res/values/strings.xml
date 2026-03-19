@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Ad SDK Demo</string>
+    <string name="admob_title">Google AdMob</string>
+    <string name="admanager_title">Google Ad Manager</string>
+    <string name="meta_title">Meta Audience Network</string>
+    <string name="unity_title">Unity Ads</string>
+    <string name="applovin_title">AppLovin MAX</string>
+    <string name="ironsource_title">ironSource LevelPlay</string>
+    <string name="inmobi_title">InMobi</string>
+    <string name="tapjoy_title">Tapjoy</string>
+    <string name="chartboost_title">Chartboost</string>
+    <string name="load_banner">Load Banner Ad</string>
+    <string name="load_interstitial">Load Interstitial Ad</string>
+    <string name="show_interstitial">Show Interstitial Ad</string>
+    <string name="load_rewarded">Load Rewarded Ad</string>
+    <string name="show_rewarded">Show Rewarded Ad</string>
+    <string name="status_label">Status:</string>
+    <string name="status_ready">Ready</string>
+    <string name="initializing">Initializing SDK...</string>
+    <string name="sdk_initialized">SDK Initialized Successfully</string>
+    <string name="ad_loaded">Ad Loaded Successfully</string>
+    <string name="ad_failed">Ad Failed to Load</string>
+    <string name="ad_shown">Ad Shown</string>
+    <string name="ad_not_ready">Ad Not Ready</string>
+</resources>

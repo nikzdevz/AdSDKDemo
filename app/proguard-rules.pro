@@ -1,0 +1,11 @@
+# Add project specific ProGuard rules here.
+-keepattributes Signature
+-keepattributes *Annotation*
+-keep class com.google.android.gms.** { *; }
+-keep class com.facebook.ads.** { *; }
+-keep class com.unity3d.ads.** { *; }
+-keep class com.applovin.** { *; }
+-keep class com.ironsource.** { *; }
+-keep class com.inmobi.** { *; }
+-keep class com.tapjoy.** { *; }
+-keep class com.chartboost.** { *; }

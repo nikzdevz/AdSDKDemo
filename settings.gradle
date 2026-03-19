@@ -1,0 +1,30 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://cboost.jfrog.io/artifactory/chartboost-ads/' }
+        maven { url 'https://sdk.tapjoy.com/' }
+        maven { url 'https://android-sdk.is.com/' }
+    }
+}
+
+rootProject.name = "AdSDKDemo"
+include ':app'
+include ':admob-app'
+include ':admanager-app'
+include ':meta-app'
+include ':unity-app'
+include ':applovin-app'
+include ':ironsource-app'
+include ':inmobi-app'
+include ':tapjoy-app'
+include ':chartboost-app'
