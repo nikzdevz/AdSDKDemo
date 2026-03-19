@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">InMobi Demo</string>
+    <string name="load_banner">Load Banner Ad</string>
+    <string name="load_interstitial">Load Interstitial Ad</string>
+    <string name="show_interstitial">Show Interstitial Ad</string>
+    <string name="load_rewarded">Load Rewarded Ad</string>
+    <string name="show_rewarded">Show Rewarded Ad</string>
+</resources>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tv_sdk_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="@color/primary"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/tv_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Status: Initializing..."
+                android:textSize="14sp"
+                android:textColor="@color/text_secondary"
+                android:layout_marginBottom="16dp"
+                android:padding="8dp"
+                android:background="@color/card_bg" />
+
+            <Button
+                android:id="@+id/btn_load_banner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/load_banner"
+                android:layout_marginBottom="8dp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btn_load_interstitial"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/load_interstitial"
+                android:layout_marginBottom="8dp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btn_show_interstitial"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/show_interstitial"
+                android:layout_marginBottom="8dp"
+                android:visibility="gone"
+                android:enabled="false" />
+
+            <Button
+                android:id="@+id/btn_load_rewarded"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/load_rewarded"
+                android:layout_marginBottom="8dp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btn_show_rewarded"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/show_rewarded"
+                android:layout_marginBottom="8dp"
+                android:visibility="gone"
+                android:enabled="false" />
+
+            <TextView
+                android:id="@+id/tv_log"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Event Log:\n"
+                android:textSize="12sp"
+                android:fontFamily="monospace"
+                android:textColor="@color/text_secondary"
+                android:padding="8dp"
+                android:background="@color/card_bg"
+                android:layout_marginTop="16dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Banner Ad Container -->
+    <FrameLayout
+        android:id="@+id/banner_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/card_bg" />
+
+</LinearLayout>

@@ -19,3 +19,12 @@ dependencyResolutionManagement {
 
 rootProject.name = "AdSDKDemo"
 include ':app'
+include ':admob-app'
+include ':admanager-app'
+include ':meta-app'
+include ':unity-app'
+include ':applovin-app'
+include ':ironsource-app'
+include ':inmobi-app'
+include ':tapjoy-app'
+include ':chartboost-app'
