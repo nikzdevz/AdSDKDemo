@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class AppLovinActivity extends AppCompatActivity implements AppLovinAdManager.AdEventListener {
     private TextView tvStatus, tvLog;
     private Button btnShowInterstitial, btnShowRewarded;
-    private FrameLayout bannerContainer;
+    private FrameLayout bannerContainer, nativeAdContainer, mrecContainer;
     private AppLovinAdManager adManager;
 
     @Override
@@ -20,9 +20,9 @@ public class AppLovinActivity extends AppCompatActivity implements AppLovinAdMan
         setContentView(R.layout.activity_ad_demo);
         if (getSupportActionBar() != null) getSupportActionBar().setTitle("AppLovin MAX");
         initViews();
-        adManager = new AppLovinAdManager(this, this);
+        adManager = new AppLovinAdManager(this);
         setupButtons();
-        adManager.initialize();
+        adManager.initialize(this);
     }
 
     private void initViews() {
@@ -31,12 +31,18 @@ public class AppLovinActivity extends AppCompatActivity implements AppLovinAdMan
         btnShowInterstitial = findViewById(R.id.btn_show_interstitial);
         btnShowRewarded = findViewById(R.id.btn_show_rewarded);
         bannerContainer = findViewById(R.id.banner_container);
+        nativeAdContainer = findViewById(R.id.native_ad_container);
+        mrecContainer = findViewById(R.id.mrec_container);
         ((TextView) findViewById(R.id.tv_sdk_title)).setText("AppLovin MAX");
         findViewById(R.id.btn_load_banner).setVisibility(View.VISIBLE);
         findViewById(R.id.btn_load_interstitial).setVisibility(View.VISIBLE);
         btnShowInterstitial.setVisibility(View.VISIBLE);
         findViewById(R.id.btn_load_rewarded).setVisibility(View.VISIBLE);
         btnShowRewarded.setVisibility(View.VISIBLE);
+        findViewById(R.id.btn_load_native).setVisibility(View.VISIBLE);
+        nativeAdContainer.setVisibility(View.GONE);
+        findViewById(R.id.btn_load_mrec).setVisibility(View.VISIBLE);
+        mrecContainer.setVisibility(View.GONE);
     }
 
     private void setupButtons() {
@@ -45,27 +51,14 @@ public class AppLovinActivity extends AppCompatActivity implements AppLovinAdMan
         btnShowInterstitial.setOnClickListener(v -> adManager.showInterstitial());
         findViewById(R.id.btn_load_rewarded).setOnClickListener(v -> adManager.loadRewarded(this));
         btnShowRewarded.setOnClickListener(v -> adManager.showRewarded());
+        findViewById(R.id.btn_load_native).setOnClickListener(v -> adManager.loadNative(this, nativeAdContainer));
+        findViewById(R.id.btn_load_mrec).setOnClickListener(v -> adManager.loadMREC(this, mrecContainer));
     }
 
-    @Override
-    public void onAdEvent(String message) {
-        runOnUiThread(() -> tvLog.setText(tvLog.getText() + "\n> " + message));
-    }
-
-    @Override
-    public void onStatusChanged(String status) {
-        runOnUiThread(() -> tvStatus.setText("Status: " + status));
-    }
-
-    @Override
-    public void onInterstitialReady(boolean ready) {
-        runOnUiThread(() -> btnShowInterstitial.setEnabled(ready));
-    }
-
-    @Override
-    public void onRewardedReady(boolean ready) {
-        runOnUiThread(() -> btnShowRewarded.setEnabled(ready));
-    }
+    @Override public void onAdEvent(String message) { runOnUiThread(() -> tvLog.setText(tvLog.getText() + "\n> " + message)); }
+    @Override public void onStatusChanged(String status) { runOnUiThread(() -> tvStatus.setText("Status: " + status)); }
+    @Override public void onInterstitialReady(boolean ready) { runOnUiThread(() -> btnShowInterstitial.setEnabled(ready)); }
+    @Override public void onRewardedReady(boolean ready) { runOnUiThread(() -> btnShowRewarded.setEnabled(ready)); }
 
     @Override
     protected void onDestroy() { adManager.destroy(); super.onDestroy(); }

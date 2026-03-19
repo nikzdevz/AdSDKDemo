@@ -39,7 +39,7 @@
                 android:id="@+id/btn_load_banner"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/load_banner"
+                android:text="Load Banner Ad"
                 android:layout_marginBottom="8dp"
                 android:visibility="gone" />
 
@@ -47,7 +47,7 @@
                 android:id="@+id/btn_load_interstitial"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/load_interstitial"
+                android:text="Load Interstitial Ad"
                 android:layout_marginBottom="8dp"
                 android:visibility="gone" />
 
@@ -55,7 +55,7 @@
                 android:id="@+id/btn_show_interstitial"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/show_interstitial"
+                android:text="Show Interstitial Ad"
                 android:layout_marginBottom="8dp"
                 android:visibility="gone"
                 android:enabled="false" />
@@ -64,7 +64,7 @@
                 android:id="@+id/btn_load_rewarded"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/load_rewarded"
+                android:text="Load Rewarded Ad"
                 android:layout_marginBottom="8dp"
                 android:visibility="gone" />
 
@@ -72,16 +72,85 @@
                 android:id="@+id/btn_show_rewarded"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/show_rewarded"
+                android:text="Show Rewarded Ad"
                 android:layout_marginBottom="8dp"
                 android:visibility="gone"
                 android:enabled="false" />
+
+            <Button
+                android:id="@+id/btn_load_native"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Load Native Ad"
+                android:layout_marginBottom="8dp"
+                android:visibility="gone" />
+
+            <FrameLayout
+                android:id="@+id/native_ad_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="120dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/card_bg"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btn_load_app_open"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Load App Open Ad"
+                android:layout_marginBottom="8dp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btn_show_app_open"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Show App Open Ad"
+                android:layout_marginBottom="8dp"
+                android:visibility="gone"
+                android:enabled="false" />
+
+            <Button
+                android:id="@+id/btn_load_rewarded_interstitial"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Load Rewarded Interstitial"
+                android:layout_marginBottom="8dp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btn_show_rewarded_interstitial"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Show Rewarded Interstitial"
+                android:layout_marginBottom="8dp"
+                android:visibility="gone"
+                android:enabled="false" />
+
+            <Button
+                android:id="@+id/btn_load_mrec"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Load MREC Ad"
+                android:layout_marginBottom="8dp"
+                android:visibility="gone" />
+
+            <FrameLayout
+                android:id="@+id/mrec_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="250dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/card_bg"
+                android:visibility="gone" />
 
             <TextView
                 android:id="@+id/tv_log"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Event Log:\n"
+                android:text="Event Log:
+"
                 android:textSize="12sp"
                 android:fontFamily="monospace"
                 android:textColor="@color/text_secondary"
@@ -92,7 +161,6 @@
         </LinearLayout>
     </ScrollView>
 
-    <!-- Banner Ad Container -->
     <FrameLayout
         android:id="@+id/banner_container"
         android:layout_width="match_parent"

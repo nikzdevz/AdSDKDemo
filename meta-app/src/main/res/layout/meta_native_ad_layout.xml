@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:background="#F5F5F5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="4dp">
+
+        <com.facebook.ads.MediaView
+            android:id="@+id/native_ad_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="8dp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/native_ad_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/native_ad_social_context"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textColor="#666666" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/native_ad_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:layout_marginBottom="4dp" />
+
+    <com.facebook.ads.MediaView
+        android:id="@+id/native_ad_media"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginBottom="4dp" />
+
+    <Button
+        android:id="@+id/native_ad_call_to_action"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Install" />
+</LinearLayout>
